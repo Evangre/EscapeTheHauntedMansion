@@ -36,12 +36,14 @@ public class Main {
         Exit exit;
         do {
             exit = new Exit(rand.nextInt(4), rand.nextInt(4));
-        } while ((exit.getX() == player.getX() && exit.getY() == player.getY()) || (exit.getX() == key.getX() && exit.getY() == key.getY()));
+        } while ((exit.getX() == player.getX() && exit.getY() == player.getY())
+                || (exit.getX() == key.getX() && exit.getY() == key.getY()));
 
         Ghost ghost;
         do {
             ghost = new Ghost(rand.nextInt(4), rand.nextInt(4));
-        } while ((ghost.getX() == player.getX() && ghost.getY() == player.getY()) || (ghost.getX() == key.getX() && ghost.getY() == key.getY())
+        } while ((ghost.getX() == player.getX() && ghost.getY() == player.getY())
+                || (ghost.getX() == key.getX() && ghost.getY() == key.getY())
                 || (ghost.getX() == exit.getX() && ghost.getY() == exit.getY()));
 
         System.out.println("Welcome to the Haunted Mansion! You have 1 minute to escape.");
